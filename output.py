@@ -35,4 +35,11 @@ def printNewGameHelp():
     print('> ', end = "")
 
 def saveGameToFile(arr):
-    pass
+    f = open("data.txt", "w")
+    for i in range(4):
+        for j in range(4):
+            f.write(str(arr[i][j]))
+            if i!=3 or j!=3:
+                f.write("\n")
+    f.close()
+    print("saved to file")

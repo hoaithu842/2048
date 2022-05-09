@@ -1,5 +1,15 @@
 import output
 import msvcrt
+import os
+
+def getSavedGame(arr):
+    if os.path.exists("data.txt"):
+        f = open("data.txt", "r")
+        for i in range(4):
+            for j in range(4):
+                arr[i][j] = int(f.readline())
+        f.close()
+        os.remove("data.txt")
 
 def getDirectionMove():
     #str = input('> ')

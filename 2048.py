@@ -6,6 +6,7 @@ import process
 arr=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
 process.generateNewBlock(arr)
 process.generateNewBlock(arr)
+input.getSavedGame(arr)
 
 while process.checkWin(arr)==-1:
     output.printBoard(arr)
@@ -18,6 +19,7 @@ while process.checkWin(arr)==-1:
             exit()
         elif userChoice==2:
             output.saveGameToFile(arr)
+            exit()
         elif userChoice==3:
             pass
     elif userChoice == -2:
